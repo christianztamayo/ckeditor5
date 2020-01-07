@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 /* globals console, window, document */
@@ -74,6 +74,10 @@ class PlaceholderUI extends Plugin {
 				tooltip: true,
 				withText: true
 			} );
+
+			// Disable the placeholder button when the command is disabled.
+			const command = editor.commands.get( 'placeholder' );
+			dropdownView.bind( 'isEnabled' ).to( command );
 
 			// Execute the command when the dropdown item is clicked (executed).
 			this.listenTo( dropdownView, 'execute', evt => {

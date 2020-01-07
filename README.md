@@ -63,7 +63,7 @@ Creating an editor using a CKEditor 5 build is very simple and can be described 
 In your HTML page add an element that CKEditor should replace:
 
 ```html
-<textarea name="content" id="editor"></textarea>
+<div id="editor"></div>
 ```
 
 Load the classic editor build (you can choose between [CDN](https://cdn.ckeditor.com/#ckeditor5), [npm](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html#npm) and [zip downloads](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html#zip-download)):
@@ -443,6 +443,18 @@ See CKEditor 5 release blog posts [on the CKEditor blog](https://ckeditor.com/bl
 
 <tr>
 	<td>
+		<a href="https://github.com/ckeditor/ckeditor5-code-block"><code>@ckeditor/ckeditor5-code-block</code></a>
+	</td>
+	<td>
+		<a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-code-block"><img src="https://img.shields.io/npm/v/@ckeditor/ckeditor5-code-block.svg" alt="@ckeditor/ckeditor5-code-block npm package badge"></a>
+	</td>
+	<td>
+		The clipboard integration.
+	</td>
+</tr>
+
+<tr>
+	<td>
 		<a href="https://github.com/ckeditor/ckeditor5-enter"><code>@ckeditor/ckeditor5-enter</code></a>
 	</td>
 	<td>
@@ -647,13 +659,37 @@ See CKEditor 5 release blog posts [on the CKEditor blog](https://ckeditor.com/bl
 
 <tr>
 	<td>
+		<a href="https://github.com/ckeditor/ckeditor5-restricted-editing"><code>@ckeditor/ckeditor5-restricted-editing</code></a>
+	</td>
+	<td>
+		<a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-restricted-editing"><img src="https://img.shields.io/npm/v/@ckeditor/ckeditor5-restricted-editing.svg" alt="@ckeditor/ckeditor5-restricted-editing npm package badge"></a>
+	</td>
+	<td>
+		The restricted editing feature.
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<a href="https://github.com/ckeditor/ckeditor5-special-characters"><code>@ckeditor/ckeditor5-special-characters</code></a>
+	</td>
+	<td>
+		<a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-special-characters"><img src="https://img.shields.io/npm/v/@ckeditor/ckeditor5-special-characters.svg" alt="@ckeditor/ckeditor5-special-characters npm package badge"></a>
+	</td>
+	<td>
+		The special characters feature.
+	</td>
+</tr>
+
+<tr>
+	<td>
 		<a href="https://github.com/ckeditor/ckeditor5-table"><code>@ckeditor/ckeditor5-table</code></a>
 	</td>
 	<td>
 		<a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-table"><img src="https://img.shields.io/npm/v/@ckeditor/ckeditor5-table.svg" alt="@ckeditor/ckeditor5-table npm package badge"></a>
 	</td>
 	<td>
-		The table feature. Work in progress.
+		The table feature.
 	</td>
 </tr>
 

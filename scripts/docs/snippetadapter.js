@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -12,7 +12,7 @@ const webpack = require( 'webpack' );
 const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const UglifyJsWebpackPlugin = require( 'uglifyjs-webpack-plugin' );
+const TerserPlugin = require( 'terser-webpack-plugin' );
 const ProgressBarPlugin = require( 'progress-bar-webpack-plugin' );
 
 const DEFAULT_LANGUAGE = 'en';
@@ -309,14 +309,15 @@ function getWebpackConfig( snippets, config ) {
 
 		optimization: {
 			minimizer: [
-				new UglifyJsWebpackPlugin( {
+				new TerserPlugin( {
 					sourceMap: true,
-					uglifyOptions: {
+					terserOptions: {
 						output: {
-							// Preserve license comments starting with an exclamation mark.
+							// Preserve CKEditor 5 license comments.
 							comments: /^!/
 						}
-					}
+					},
+					extractComments: false
 				} )
 			]
 		},
@@ -365,24 +366,6 @@ function getWebpackConfig( snippets, config ) {
 							} )
 						}
 					]
-				},
-				// `file-loader` is used to handle assets introduced by 3rd party plugins.
-				// All guides in the documentation that could use images should be named as follow: `guide-type/guide-name`
-				//
-				// NOTE: You cannot use more than single slash `/` in the guide name.
-				// All images will be saved in the `snippets/` directory as `assets/images/[file]`.
-				// Unfortunately, compiled JS/CSS file that requires images will be looking for those assets in:
-				// `snippets/[guide-type/guide-name]/assets/images/` so we need to manually go up twice.
-				// ATM there is no easy way to find the number how many directories we need to go up so the assumption about names of
-				// the guides seems to be a safer solution.
-				{
-					test: /\.(png|jpe?g|gif)$/,
-					loader: 'file-loader',
-					options: {
-						name: config.production ? '[sha512:hash:base64:7].[ext]' : '[name].[ext]',
-						outputPath: path.join( 'assets', 'images' ),
-						publicPath: [ '..', '..', 'assets', 'images' ].join( '/' )
-					},
 				}
 			]
 		}

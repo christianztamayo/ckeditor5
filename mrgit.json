@@ -1,13 +1,7 @@
 {
   "packages": "packages/",
-  "packagesPrefix": [
-    "@ckeditor/ckeditor5-",
-    "@ckeditor/ckeditor-"
-  ],
-  "baseBranches": [
-    "master",
-    "stable"
-  ],
+  "packagesPrefix": [ "@ckeditor/ckeditor5-", "@ckeditor/ckeditor-" ],
+  "baseBranches": [ "master", "stable" ],
   "dependencies": {
     "@ckeditor/ckeditor-cloud-services-core": "ckeditor/ckeditor-cloud-services-core",
     "@ckeditor/ckeditor5-adapter-ckfinder": "ckeditor/ckeditor5-adapter-ckfinder",
@@ -24,6 +18,7 @@
     "@ckeditor/ckeditor5-clipboard": "ckeditor/ckeditor5-clipboard",
     "@ckeditor/ckeditor5-cloud-services": "ckeditor/ckeditor5-cloud-services",
     "@ckeditor/ckeditor5-ckfinder": "ckeditor/ckeditor5-ckfinder",
+    "@ckeditor/ckeditor5-code-block": "ckeditor/ckeditor5-code-block",
     "@ckeditor/ckeditor5-core": "ckeditor/ckeditor5-core",
     "@ckeditor/ckeditor5-easy-image": "ckeditor/ckeditor5-easy-image",
     "@ckeditor/ckeditor5-editor-balloon": "ckeditor/ckeditor5-editor-balloon",
@@ -48,6 +43,8 @@
     "@ckeditor/ckeditor5-paragraph": "ckeditor/ckeditor5-paragraph",
     "@ckeditor/ckeditor5-paste-from-office": "ckeditor/ckeditor5-paste-from-office",
     "@ckeditor/ckeditor5-remove-format": "ckeditor/ckeditor5-remove-format",
+    "@ckeditor/ckeditor5-restricted-editing": "ckeditor/ckeditor5-restricted-editing",
+    "@ckeditor/ckeditor5-special-characters": "ckeditor/ckeditor5-special-characters",
     "@ckeditor/ckeditor5-table": "ckeditor/ckeditor5-table#i/3287",
     "@ckeditor/ckeditor5-theme-lark": "ckeditor/ckeditor5-theme-lark",
     "@ckeditor/ckeditor5-typing": "ckeditor/ckeditor5-typing",

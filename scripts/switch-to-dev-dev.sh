@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+# @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 # For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 
 # Symlinks packages from https://github.com/ckeditor/ckeditor5-dev in ckeditor5's node_modules.
@@ -37,6 +37,11 @@ echo "Linking eslint-config-ckeditor5..."
 
 rm -rf node_modules/eslint-config-ckeditor5
 ln -s ../../ckeditor5-dev/packages/eslint-config-ckeditor5 node_modules/
+
+echo "Linking stylelint-config-ckeditor5..."
+
+rm -rf node_modules/stylelint-config-ckeditor5
+ln -s ../../ckeditor5-dev/packages/stylelint-config-ckeditor5 node_modules/
 
 echo "Linking jsdoc-plugins..."
 
